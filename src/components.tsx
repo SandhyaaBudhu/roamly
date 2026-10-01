@@ -27,6 +27,7 @@ import {
 } from "lucide-react";
 import {
   currency,
+  asset,
   dateAfter,
   destinations,
   type Experience,
@@ -46,7 +47,7 @@ export function Photo({
       {...props}
       onError={(e) => {
         e.currentTarget.onerror = null;
-        e.currentTarget.src = "/placeholder.svg";
+        e.currentTarget.src = asset("placeholder.svg");
       }}
     />
   );

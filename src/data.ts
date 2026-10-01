@@ -1,4 +1,5 @@
-export const photo = (id: string) => `/images/${id}.jpg`;
+export const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+export const photo = (id: string) => asset(`images/${id}.jpg`);
 export interface Stay {
   id: string;
   name: string;
