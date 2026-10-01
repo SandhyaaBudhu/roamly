@@ -346,7 +346,7 @@ summary:focus-visible {
 .hero-photo {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
   border-radius: 15px;
   object-position: center 30%;
 }
@@ -357,9 +357,11 @@ summary:focus-visible {
     linear-gradient(90deg, #0c252ccd 0%, #17323863 47%, #15344405 85%),
     linear-gradient(0deg, #0d292a77, transparent 38%);
   border-radius: 15px;
-  z-index: -1;
+  z-index: 1;
 }
 .hero-content {
+  position: relative;
+  z-index: 2;
   padding: 64px 60px;
   color: #fff;
 }
@@ -408,6 +410,7 @@ summary:focus-visible {
   position: absolute;
   right: 36px;
   bottom: 157px;
+  z-index: 2;
   display: flex;
   gap: 7px;
   align-items: center;
@@ -423,6 +426,7 @@ summary:focus-visible {
   bottom: 28px;
   left: 60px;
   right: 60px;
+  z-index: 3;
 }
 .hero-search {
   display: flex;
@@ -697,17 +701,18 @@ summary:focus-visible {
 .trip-style img {
   position: absolute;
   inset: 0;
-  z-index: -2;
+  z-index: 0;
 }
 .trip-style:after {
   content: "";
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 1;
   background: linear-gradient(0deg, #123b32dd, #132d2a08);
 }
 .trip-style-content {
   position: absolute;
+  z-index: 2;
   left: 26px;
   right: 20px;
   bottom: 24px;
