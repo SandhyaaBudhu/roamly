@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ROAMLY</title>
+    <script>
+      const base = "/roamly";
+      const path = window.location.pathname;
+      const next = path.startsWith(base) ? path.slice(base.length) || "/" : path;
+      sessionStorage.redirect = next + window.location.search + window.location.hash;
+      window.location.replace(base + "/");
+    </script>
+  </head>
+  <body></body>
+</html>
