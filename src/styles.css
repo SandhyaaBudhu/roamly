@@ -342,6 +342,9 @@ summary:focus-visible {
   border-radius: 15px;
   isolation: isolate;
   background: #3b675b;
+  background-position: center 30%;
+  background-size: cover;
+  overflow: hidden;
 }
 .hero-photo {
   position: absolute;
@@ -354,8 +357,8 @@ summary:focus-visible {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, #0c252ccd 0%, #17323863 47%, #15344405 85%),
-    linear-gradient(0deg, #0d292a77, transparent 38%);
+    linear-gradient(90deg, #0c252cc0 0%, #17323855 43%, #15344400 82%),
+    linear-gradient(0deg, #0d292a55, transparent 42%);
   border-radius: 15px;
   z-index: 1;
 }
@@ -597,6 +600,8 @@ summary:focus-visible {
   border-radius: 10px;
   overflow: hidden;
   background: var(--soft);
+  background-position: center;
+  background-size: cover;
 }
 .destination-photo:after {
   content: "";
@@ -697,6 +702,8 @@ summary:focus-visible {
   overflow: hidden;
   isolation: isolate;
   min-height: 200px;
+  background-position: center;
+  background-size: cover;
 }
 .trip-style img {
   position: absolute;
@@ -915,6 +922,8 @@ summary:focus-visible {
   min-height: 478px;
   overflow: hidden;
   border-radius: 11px 0 0 11px;
+  background-position: center;
+  background-size: cover;
 }
 .story-photo img {
   position: absolute;

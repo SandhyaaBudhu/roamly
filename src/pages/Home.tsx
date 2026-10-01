@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef, useState, type CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowDown,
@@ -19,10 +19,12 @@ import { Photo, SearchForm, SectionHeading, StayCard } from "../components";
 export function Home() {
   const rail = useRef<HTMLDivElement>(null);
   const [subscribed, setSubscribed] = useState(false);
+  const imageBg = (image: string) =>
+    ({ backgroundImage: `url("${image}")` }) as CSSProperties;
   return (
     <>
       <section className="hero-shell">
-        <div className="hero">
+        <div className="hero" style={imageBg(images.coast)}>
           <Photo
             src={images.coast}
             alt="Colorful coastal village overlooking the turquoise Mediterranean"
@@ -115,7 +117,7 @@ export function Home() {
               className="destination-card"
               key={d.name}
             >
-              <div className="destination-photo">
+              <div className="destination-photo" style={imageBg(d.image)}>
                 <Photo
                   src={d.image}
                   alt={`A glimpse of ${d.name}, ${d.country}`}
@@ -156,7 +158,7 @@ export function Home() {
               <Compass strokeWidth={0.6} />
             </div>
           </div>
-          <div className="trip-style city-style">
+          <div className="trip-style city-style" style={imageBg(images.lisbon)}>
             <Photo
               src={images.lisbon}
               alt="A yellow tram in Lisbon’s sunlit Bica district"
@@ -173,7 +175,10 @@ export function Home() {
             </div>
           </div>
           <div className="trip-style-stack">
-            <div className="trip-style island-style">
+            <div
+              className="trip-style island-style"
+              style={imageBg(images.santorini)}
+            >
               <Photo
                 src={images.santorini}
                 alt="Whitewashed island homes by the Aegean Sea"
@@ -219,7 +224,7 @@ export function Home() {
         </p>
       </section>
       <section className="container story-section">
-        <div className="story-photo">
+        <div className="story-photo" style={imageBg(images.lisbon)}>
           <Photo
             src={images.lisbon}
             alt="Lisbon’s hillside streets and warm pastel buildings"
